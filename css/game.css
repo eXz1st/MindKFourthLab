@@ -1,0 +1,75 @@
+.stadium {
+    background: url(../img/trava.png);
+    margin: 100px auto 0;
+    width: 1155px;
+    position: relative;
+    padding: 0 10px;
+}
+.track {
+    position: relative;
+    height: 110px;
+}
+.track + .track {
+    margin-top: 50px;
+}
+.player {
+    height: 100px;
+    width: 110px;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    background: center no-repeat;
+    transition: left linear 2s;
+}
+.zaec {
+    background-image: url(../img/zaec.png);
+}
+.volk {
+    background-image: url(../img/volk.png);
+}
+.barrier {
+    position: absolute;
+    width: 55px;
+    height:110px;
+    background: center no-repeat;
+    top: 5px;
+}
+.kamen {
+    background-image: url(../img/kamen.png);
+    background-position: center 75px;
+}
+.yagoda {
+    background-image: url(../img/yagoda.png) ;
+}
+
+.winner {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 20px;
+    text-align: center;
+}
+
+.winner > img {
+    position: relative;
+    margin: 0 auto;
+    -webkit-animation: opacityToggle .7s;
+    animation: opacityToggle .7s;
+}
+
+@-webkit-keyframes opacityToggle{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+  @keyframes opacityToggle{
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }

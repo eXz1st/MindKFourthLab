@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Поле с препятствиями</title>
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/game.css">
+    
+</head>
+<body>
+    <div class="winner hidden zaecWin"><img src="img/zaecWin.png" alt=""></div>
+    <div class="winner hidden volkWin"><img src="img/volkWin.png" alt=""></div>
+    <div class="barrier yagoda hidden" position=""></div>
+    <div class="barrier kamen hidden" position=""></div>
+    <div class="player hidden"></div>
+    <div class="stadium">
+        <div class="track first">
+        </div>
+        <div class="track second">
+        </div>
+    </div>
+    <div class="text-center panel-body"><button class="btn btn-success" id="run">Run</button></div>
+    <div class="text-center panel-body"><button class="btn btn-success hidden" id="restart">Restart</button></div>
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/runner.js"></script>
+    <script type="text/javascript" src="js/zaec.js"></script>
+    <script type="text/javascript" src="js/volk.js"></script>
+    <script type="text/javascript" src="js/barrier.js"></script>
+    <script>
+        window.onload = function () {
+          game = new Game();
+          game.init();
+        };
+
+        document.querySelector('#run').onclick = function() {
+          game.run();
+        }
+
+        document.querySelector('#restart').onclick = function() {  
+          game.restart();
+        }
+    </script>
+</body>
+</html>
+
+
+
+
